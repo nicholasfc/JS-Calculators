@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Unit-Converter</title>
+    <style>
+      body {
+        text-align: center;
+        background: lightcoral;
+        font-family: "Courier New", Courier, monospace;
+      }
+      input {
+        margin: auto;
+        width: 30%;
+        padding: 10px;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 15px;
+      }
+      .title {
+        margin: 20px;
+        padding: 20px;
+      }
+      .results {
+        margin: auto;
+        width: 30%;
+        padding: 20px;
+      }
+      .box1 {
+        background: lightseagreen;
+      }
+      .box2 {
+        background: lightskyblue;
+        margin: 20px 0 20px 0;
+      }
+      .box3 {
+        background: lightgoldenrodyellow;
+      }
+      .units,
+      #grams-result,
+      #pounds-result,
+      #stones-result {
+        display: inline-block;
+      }
+
+      input,
+      .box1,
+      .box2,
+      .box3 {
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="title">Unit Converter</h1>
+    <input id="kilo-input" type="number" placeholder="Enter your kilo" />
+
+    <div class="results">
+      <div class="box1">
+        <h3 class="units">Grams:</h3>
+        <div id="grams-result"></div>
+      </div>
+      <div class="box2">
+        <h3 class="units">Pounds:</h3>
+        <div id="pounds-result"></div>
+      </div>
+      <div class="box3">
+        <h3 class="units">Stones:</h3>
+        <div id="stones-result"></div>
+      </div>
+    </div>
+    <script>
+      document.getElementById("kilo-input").addEventListener("input", val => {
+        let kilos = val.target.value;
+        document.getElementById("grams-result").innerHTML = kilos * 1000;
+        document.getElementById("pounds-result").innerHTML = parseFloat(
+          kilos * 2.20462262185
+        ).toFixed(2);
+        document.getElementById("stones-result").innerHTML = parseFloat(
+          kilos / 6.35029318
+        ).toFixed(2);
+      });
+    </script>
+  </body>
+</html>
