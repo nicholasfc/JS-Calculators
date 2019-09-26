@@ -1,0 +1,74 @@
+body {
+  text-align: center;
+  background: lightcoral;
+  font-family: "Courier New", Courier, monospace;
+}
+input {
+  margin: auto;
+  width: 30%;
+  padding: 10px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 15px;
+}
+.title {
+  margin: 20px;
+  padding: 20px;
+}
+.results {
+  margin: auto;
+  width: 30%;
+  padding: 20px;
+}
+.box1 {
+  background: lightseagreen;
+}
+.box2 {
+  background: lightskyblue;
+  margin: 20px 0 20px 0;
+}
+.box3 {
+  background: lightgoldenrodyellow;
+}
+.units,
+#grams-result,
+#pounds-result,
+#stones-result {
+  display: inline-block;
+}
+
+input,
+.box1,
+.box2,
+.box3,
+#result {
+  border-radius: 5px;
+}
+
+.bmi-calculator,
+.unit-converter,
+.tip-calculator {
+  height: 100vh;
+}
+
+#bmi-result,
+#tip-result {
+  margin: 20px auto;
+  width: 30%;
+  padding: 20px;
+  visibility: hidden;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: black;
+}
+
+li {
+  list-style: none;
+  display: inline;
+  margin: 10px;
+}
+
+#tip-result {
+  background-color: darkcyan;
+}
