@@ -10,6 +10,17 @@ input {
   font-family: "Courier New", Courier, monospace;
   font-size: 15px;
 }
+
+li {
+  list-style: none;
+  display: inline;
+  margin: 10px;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: black;
+}
 .title {
   margin: 20px;
   padding: 20px;
@@ -44,10 +55,13 @@ input,
   border-radius: 5px;
 }
 
-.bmi-calculator,
-.unit-converter,
-.tip-calculator {
+.unit-converter {
   height: 100vh;
+}
+
+.bmi-calculator,
+.tip-calculator {
+  height: 50vh;
 }
 
 #bmi-result,
@@ -56,17 +70,6 @@ input,
   width: 30%;
   padding: 20px;
   visibility: hidden;
-}
-
-.navigation a {
-  text-decoration: none;
-  color: black;
-}
-
-li {
-  list-style: none;
-  display: inline;
-  margin: 10px;
 }
 
 #tip-result {
